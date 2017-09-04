@@ -7,7 +7,7 @@ Data         | Local
 
 ### Participantes
 * Ayrton Fernando Botelho
-* Johnny Mayron Santana Ferreira
+* Johnny Mayron Santana Ferreira (Product Owner)
 * Samir Vieira Andrade Ferreira
 * Vanessa Vieira da Conceição
 

@@ -21,9 +21,33 @@ Para poder acessar as funcionalidades da aplicação
 
 Como visitante (all)
 
-Gostaria de aproveitar o cadastro com app (Facebook, Twitter, Gmail)
+Gostaria de aproveitar o cadastro com app (Facebook, Twitter, Google)
 
 Para poder acessar as funcionalidades da aplicação
+
+  ------------------------
+
+Como visitante (all)
+
+Gostaria de visualizar os comentários por ordem cronológica na página inicial
+
+Para poder avaliar a efetividade da aplicação
+
+  ------------------------
+
+Como visitante (all)
+
+Gostaria de visualizar os comentários por ordem de avaliação (mais positivas ou negativas) na página inicial
+
+Para Para poder avaliar a efetividade da aplicação
+
+  ------------------------
+
+Como visitante (all)
+
+Gostaria de entrar em contato com o desenvolvedor da aplicação
+
+Para solicitar informações, fazer reclamações, sugestões, elogiar, etc.
 
   ------------------------
 
@@ -80,3 +104,19 @@ Como usuário (logado)
 Gostaria de compartilhar informações sobre o aplicativo
 
 Para reportar eficiência ou não da predição da ferramenta
+
+  ------------------------
+
+Como usuário (logado)
+
+Gostaria de adicionar uma cidade aos favoritos
+
+Para facilitar a busca após realizar login
+
+  ------------------------
+
+Como usuário (logado)
+
+Gostaria de deslogar de minha conta
+
+Para encerrar a sessão de navegação

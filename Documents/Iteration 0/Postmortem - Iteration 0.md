@@ -9,7 +9,7 @@ Início da Iteração
 
 Término da iteração
 
-11/09/2017
+25/09/2017
 
 -------------------------
 #### O que estava planejado
@@ -21,6 +21,8 @@ Término da iteração
 | Definir o que seria entregue na primeira iteração | Equipe |
 | Configurar o ambiente de desenvolvimento | Equipe |
 | Estudar API's, Ruby, HTML/CSS | Equipe |
+| Criação de histórias de usuário | Equipe |
+| Criação de Mockups e Storyboards Lo-Fi | Equipe |
 -------------------------
 #### O que foi feito
 
@@ -30,7 +32,7 @@ Término da iteração
 | Definição de uso da plataforma web | Equipe |
 | Ambiente de desenvolvimento configurado | Equipe |
 | Elaboração de histórias de usuário parciais | Johnny |
-| Storyboard LoFi | Samir e Vanessa |
+| Mockups | Equipe |
 | Trilhas do Ruby e Git | Equipe |
 -------------------------
 #### O que não foi feito?
@@ -47,9 +49,9 @@ Término da iteração
 | **Ação** | **Responsável** |
 | --- | --- |
 | Estudar API's | Samir |
-| Estudar HTML/CSS | Vanessa |
-| Início do desenvolvimento de algumas histórias de usuário | Ayrton e Johnny |
-| Início do desenvolvimento do layout do site | Vanessa |
+| Estudar HTML/CSS | Vanessa e Johnny |
+| Início do desenvolvimento de algumas histórias de usuário | Ayrton e Samir |
+| Início do desenvolvimento do layout do site | Vanessa e Johnny |
 | Análise e definição das API’s que serão utilizadas | Samir |
 -------------------------
 #### Lições aprendidas

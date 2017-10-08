@@ -32,11 +32,11 @@
                 <ul class="nav navbar navbar-right">
                     <% if current_user%>
                     <li>Logado como: <%= current_user.name%> - <%= image_tag(current_user.image, width: '50', height: '50', class: 'image-circle')%></li>
-                    <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+                    <button type="button" class="btn btn-outline-info"><%= link_to "Sair", destroy_user_session_path, method: :delete %></button>
 
                     <% else %>
                     <li><%= link_to "users/auth/facebook" do %> <%= image_tag('facebook.png', width: '40', height: '40', class: 'image-circle')%><%end%></li>
-                    <li><%= link_to "auth/twitter" do %> <%= image_tag('twitter.png', width: '40', height: '40', class: 'image-circle')%><%end%></li>
+                    <li><%= link_to "users/auth/twitter" do %> <%= image_tag('twitter.png', width: '40', height: '40', class: 'image-circle')%><%end%></li>
                     <%end%>
                 </ul>
             </div>
@@ -55,6 +55,10 @@
             Desconectado
         </div>
     <% end %>
+    <div class="btn-group-vertical" role="group", aria-label="menu">
+        <button type="button" class="btn btn-info">Cadastro</button>
+        <button type="button" class="btn btn-info">Fale Conosco</button>
+    </div>
 </body>
 <%= yield %>
 </body>

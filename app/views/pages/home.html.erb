@@ -1,7 +1,4 @@
-<h1>SeraQChoveu?</h1>
-
-<% unless current_user %>
-  <%= link_to "Entrar com Facebook", user_facebook_omniauth_authorize_path %>
-<% else %>
-  <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+<% if current_user %>
+    <p> Seus dados: </p>
+    <%= current_user.inspect %>
 <% end %>

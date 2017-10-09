@@ -56,7 +56,13 @@
         </div>
     <% end %>
     <div class="btn-group-vertical" role="group", aria-label="menu">
-        <button type="button" class="btn btn-info">Cadastro</button>
+        <button type="button" class="btn btn-info">
+            <% if current_user %>
+                <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+            <% else %>
+                <%= link_to "Cadastro", new_user_registration_path %>
+            <% end %>
+        </button>
         <button type="button" class="btn btn-info">Fale Conosco</button>
     </div>
 </body>

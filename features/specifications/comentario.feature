@@ -1,3 +1,4 @@
+# language: pt
 Funcionalidade: Adicionar comentário
 Como usuário (logado)
 Gostaria de compartilhar informações sobre o aplicativo

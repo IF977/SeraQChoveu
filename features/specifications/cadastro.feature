@@ -1,3 +1,4 @@
+# language: pt
 Funcionalidade: Novo cadastro
 Como visitante (all)
 Gostaria de criar conta (com informações básicas) de acesso a aplicação

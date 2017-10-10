@@ -1,3 +1,6 @@
+# encoding: utf-8
+#!/usr/bin/env ruby 
+
 Dado (/^que eu clique em adicionar comentario$/) do
 	visit ()
 end

@@ -1,3 +1,45 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: 72a0b3b5d257370ac188a0dcfb171850b50d84a8
+  specs:
+    rspec-core (3.7.0.pre)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: 4f611817858efbcfdb66783648e8dbbb4400666b
+  specs:
+    rspec-expectations (3.7.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 78d04f05d45ef920afb0a51f118b119898c76ab3
+  specs:
+    rspec-mocks (3.7.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 404651a743f316f681e578233f9f4dde35a6ece9
+  specs:
+    rspec-rails (3.7.0.pre)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.7.0.pre)
+      rspec-expectations (= 3.7.0.pre)
+      rspec-mocks (= 3.7.0.pre)
+      rspec-support (= 3.7.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 95a23e928232659f05903575b7b0cb0f6f2b4030
+  specs:
+    rspec-support (3.7.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -112,19 +154,6 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rspec (3.6.0)
-      rspec-core (~> 3.6.0)
-      rspec-expectations (~> 3.6.0)
-      rspec-mocks (~> 3.6.0)
-    rspec-core (3.6.0)
-      rspec-support (~> 3.6.0)
-    rspec-expectations (3.6.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.6.0)
-    rspec-mocks (3.6.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.6.0)
-    rspec-support (3.6.0)
     ruby_dep (1.5.0)
     sass (3.5.2)
       sass-listen (~> 4.0.0)
@@ -179,7 +208,11 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.7)
   rails (~> 5.1.4)
-  rspec (~> 3.6)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

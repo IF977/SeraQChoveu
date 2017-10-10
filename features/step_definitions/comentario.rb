@@ -2,12 +2,12 @@
 #!/usr/bin/env ruby 
 
 Dado (/^que eu clique em adicionar comentario$/) do
-	visit ()
+	visit ""
 end
 
 Quando (/^eu preencher os campos de comentario$/) do
-	fill_in 'Comentario', with " "
-	fill_in 'Avaliacao', with " "
+	fill_in 'Comentario', :with => " "
+	fill_in 'Avaliacao', :with => " "
 end
 
 E (/^clicar enviar$/) do

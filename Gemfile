@@ -41,6 +41,15 @@ group :development, :test do
   gem "rspec-mocks", :github => "rspec/rspec-mocks"
   gem "rspec-support", :github => "rspec/rspec-support"
   gem "rspec-rails", :github => "rspec/rspec-rails"
+  gem 'capybara', '~> 2.5'
+  gem 'factory_girl_rails', '~> 4.5.0'
+end
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'shoulda-matchers', '~> 3.0', require: false
+  gem 'database_cleaner'
+  gem 'faker', '~> 1.6.1'
 end
 
 group :development do

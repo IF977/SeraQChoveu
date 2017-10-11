@@ -23,7 +23,6 @@
                 </button>
                 <h1><%= link_to root_path do %>
                     <%= image_tag('logo.png', width: '100', height: '100') %>
-                    SeraQChoveu?
                     <% end %>
                 </h1>
             </div>
@@ -40,7 +39,7 @@
             Desconectado
         </div>
     <div class="btn-group-vertical" role="group", aria-label="menu">
-        <button type="button" class="btn btn-info">Cadastro</button>
+        <button type="button" class="btn btn-info"> <%= link_to "Cadastro", new_user_path %> </button>
         <button type="button" class="btn btn-info">Fale Conosco</button>
     </div>
 </body>

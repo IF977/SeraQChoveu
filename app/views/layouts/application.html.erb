@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SeraQChoveu</title>
+<head>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-  <body>
-    <%= yield %>
-  </body>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr_only">Toggle Navigation</span>
+                    <span class="icon_bar"></span>
+                    <span class="icon_bar"></span>
+                </button>
+                <h1><%= link_to root_path do %>
+                    <%= image_tag('logo.png', width: '100', height: '100') %>
+                    SeraQChoveu?
+                    <% end %>
+                </h1>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar navbar-right">
+                    <li><%= link_to "users/auth/facebook" do %> <%= image_tag('facebook.png', width: '40', height: '40', class: 'image-circle')%><%end%></li>
+                    <li><%= link_to "users/auth/twitter" do %> <%= image_tag('twitter.png', width: '40', height: '40', class: 'image-circle')%><%end%></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="alert alert-danger" role="alert">
+            Desconectado
+        </div>
+    <div class="btn-group-vertical" role="group", aria-label="menu">
+        <button type="button" class="btn btn-info">Cadastro</button>
+        <button type="button" class="btn btn-info">Fale Conosco</button>
+    </div>
+</body>
+<%= yield %>
+</body>
 </html>

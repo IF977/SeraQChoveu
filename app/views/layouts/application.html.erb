@@ -11,12 +11,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     
-    <style>
-      #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
 </head>
 
 <body>
@@ -49,35 +43,6 @@
         <button type="button" class="btn btn-info"> <%= link_to "Cadastro", new_user_path %> </button>
         <button type="button" class="btn btn-info">Fale Conosco</button>
     </div>
-        <h3>Teste do mapa do Google Maps</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var recife = {lat: -8.05428, lng: -34.8813};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: recife
-        });
-
-        //Acho que isso aqui não fica aqui, talvez no model e retorne pra cá apenas o marcador desejado como variável
-        var marker = new google.maps.Marker({
-          position: recife,
-          map: map
-          title: 'Clique para mais informações'
-        });
-        //Informação de dentro do marcador, acho interessante um link para aí vir informações mais completas
-        var contentString = '<h1>Cidade:</h1>';
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSGVPIVj04qsocZ79OWxcxiMeYyDkL4Mg&callback=initMap">
-    </script>
 </body>
 <%= yield %>
 </body>

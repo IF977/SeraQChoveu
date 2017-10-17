@@ -2,6 +2,20 @@
 <html>
   <head>
     <style>
+       #imaginary_container{
+       }
+       .stylish-input-group .input-group-addon{
+        background: white !important; 
+       }
+       .stylish-input-group .form-control{
+        border-right:0; 
+       	box-shadow:0 0 0; 
+       	border-color:#ccc;
+       }
+       .stylish-input-group button{
+        border:0;
+        background:transparent;
+       }
        #map {
         height: 400px;
         width: 100%;
@@ -9,6 +23,22 @@
     </style>
   </head>
   <body>
+    <div class="container">
+    	<div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div id="imaginary_container"> 
+                    <div class="input-group stylish-input-group">
+                        <input type="text" class="form-control"  placeholder="Busque a cidade" >
+                        <span class="input-group-addon">
+                            <button type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>  
+                        </span>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
     <div id="map"></div>
     <script>
       function initMap() {
@@ -21,7 +51,7 @@
           position: recife,
           map: map
         });
-        var contentString = '<h1>Cidade:</h1>';
+        var contentString = 'Cidade:';
         var infowindow = new google.maps.InfoWindow({
           content: contentString
         });

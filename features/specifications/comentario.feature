@@ -1,11 +1,18 @@
-# language: pt
-Funcionalidade: Adicionar coment�rio
-Como usu�rio (logado)
-Gostaria de compartilhar informa��es sobre o aplicativo
-Para reportar efici�ncia ou n�o da predi��o da ferramenta
+Feature: Adicionar comentário
+    As Usuário (logado)
+    Gostaria de compartilhar informações sobre o aplicativo
+    Para reportar eficiência ou não da predição da ferramenta
 
-Cenario: Adicionar coment�rio
-Dado que eu clique em adicionar coment�rio
-Quando eu preencher os campos de coment�rio
-E clicar enviar
-Entao coment�rio enviado
+    @javascript
+    Scenario Outline: Adicionar comentário
+        Given Que eu clique em adicionar comentário
+        When eu preencher <usuário> no campo nome
+        And eu preencher <texto> no campo comentário
+        And eu preencher <rate> no campo avaliação
+        And clicar Enviar
+        Then comentário enviado
+    
+    Examples:
+        | usuário | texto | rate |
+        | Johnny | asdfaf asfgag agag asg www | 5 |
+        | Samir |asfasf kkkkk asidpioasudpoasidpoapsoifpoasifposai | 2 |

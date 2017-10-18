@@ -40,7 +40,7 @@ class ComentariosController < ApplicationController
   def update
     respond_to do |format|
       if @comentario.update(comentario_params)
-        format.html { redirect_to @comentario, notice: 'Comentario modificado.' }
+        format.html { redirect_to comentarios_url, notice: 'Comentario modificado.' }
         format.json { render :ok, location: @comentario }
       else
         format.html { render :edit }

@@ -6,9 +6,9 @@ Feature: Adicionar comentário
     @javascript
     Scenario Outline: Adicionar comentário
         Given Que eu clique em adicionar comentário
-        When eu preencher <usuário> no campo nome
-        And eu preencher <texto> no campo comentário
-        And eu preencher <rate> no campo avaliação
+        When eu preencher <usuário> no campo Usuario
+        And eu preencher <texto> no campo Texto
+        And eu preencher <rate> no campo Rate
         And clicar Enviar
         Then comentário enviado
     

@@ -1,8 +1,8 @@
-Entao (/^cadastro completo$/) do
-    redirect_to root_path	
+Then (/^cadastro completo$/) do |root_path|
+    redirect_to root_path
 end
 
 
-Entao (/^comentario enviado$/) do
-	redirect_to comentarios_url
+Then (/^comentario enviado$/) do |comentarios|
+	redirect_to "/comentarios"
 end

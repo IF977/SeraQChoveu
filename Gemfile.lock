@@ -245,7 +245,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capybara (~> 2.5)
+  capybara
   capybara-webkit
   coffee-rails (~> 4.2)
   cucumber

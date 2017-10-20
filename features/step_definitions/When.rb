@@ -1,44 +1,34 @@
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |nome|
-	fill_in('Login', :with => 'abc')
+When (/^[Eu]*clicar no botao "Cadastro"$/) do	
+	click_button Cadastrao
+	redirect_to "/users/new"
+end
+	
+When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |nome, email, senha, repetir, cidade, data|
+	fill_in('Login', :with => '')
+	fill_in('E-mail', :with => '')
+	fill_in('Senha', :with => '')
+	fill_in('Repetir senha', :with => '')
+	fill_in('Cidade', :with => '')
+	fill_in('Data de nascimento', :with => '') 
 end
 
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |email|
-	fill_in('E-mail', :with => 'cba@abc.com')
+When (/^[Eu]*clicar no botao "create user"$/) do	
+	click_button Create User
+	redirect_to root_path
 end
 
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |senha|
-	fill_in('Senha', :with => 'qwert')
+When (/^[Eu]*clicar no botao "Comentários"$/) do	
+	click_button Comentarios
+redirect_to "/comentarios/new"
 end
 
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |repetirsenha|
-	fill_in('Repetir senha', :with => 'qwert')
+When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do | usuário, texto, rate |
+	fill_in('Usuario', :with => '')
+    fill_in('Texto', :with => '')
+	fill_in('Rate', :with => '')
 end
 
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |cidade|
-	fill_in('Cidade', :with => 'Recife')
+When (/^[Eu]*clicar no botao "Enviar"$/) do	
+	click_button (Enviar)
+	redirect_to "/comentarios"
 end
-
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |datadenascimento|
-	fill_in('Data de nascimento', :with => '01/01/2000') 
-end
-
-When (/^[Eu]*clicar no botao ([^"])*$/) do	
-	click_button Cadastrar
-end
-
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |usuário|
-	fill_in('Usuario', :with => 'mmm')
-end
-
-When (/^[Eu]*preencher ([^"])*no campo ([^"])*$/) do |texto|
-    fill_in('Texto', :with => 'aspoifdaspoiua spfsaupfoui asfouuasp fpasuifpoi')
-end 
-
-When (/^[Eu]*preencher ([^"])*no campo ([^""])*$/) do |rate|
-	fill_in('Rate', :with => '4')
-end
-
-When (/^[Eu]*clicar no botao ([^"])*$/) do	
-	click_button Enviar
-end
-

@@ -5,8 +5,9 @@ Feature: Cadastro
     
     @javascript
     Scenario Outline: Criar uma nova conta
-        Given Que eu clique em cadastro
-        When eu preencher <nome> no campo de Login
+        Given Estou na página inicial
+        When eu clique em cadastro
+        And eu preencher <nome> no campo de Login
         And eu preencher <e-mail> no campo de e-mail
         And eu preencher <senha> no campo de senha
         And eu preencher <repetir senha> no campo de repetir senha

@@ -1,18 +1,19 @@
 Feature: Adicionar comentário
-    As Usuário (logado)
+    Como usuário (logado)
     Gostaria de compartilhar informações sobre o aplicativo
     Para reportar eficiência ou não da predição da ferramenta
 
     @javascript
     Scenario Outline: Adicionar comentário
-        Given Que eu clique em adicionar comentário
-        When eu preencher <usuário> no campo Usuario
+        Given Estou na página inicial
+        When eu clique em comentários
+        And eu preencher <usuário> no campo Usuario
         And eu preencher <texto> no campo Texto
         And eu preencher <rate> no campo Rate
         And clicar Enviar
         Then comentário enviado
     
     Examples:
-        | usuário | texto | rate |
-        | Johnny | asdfaf asfgag agag asg www | 5 |
-        | Samir |asfasf kkkkk asidpioasudpoasidpoapsoifpoasifposai | 2 |
+        |usuário|texto|rate|
+        |Johnny|asdfaf asfgag agag asg www|5|
+        |Samir|ddd aaa qqq rrrrr|2|

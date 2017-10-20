@@ -1,7 +1,3 @@
-Given (/^[Eu]*clique no botao ([^Cadastro]*)$/) do	
-    visit (root_path)
-end
-
-Given (/^[Eu]*clique no botao ([^Comentário]*)$/) do
-	visit (new_comentario_path)
+Given (/^[Eu]*estou na página inicial $/) do |root_path|
+	visit root_path
 end

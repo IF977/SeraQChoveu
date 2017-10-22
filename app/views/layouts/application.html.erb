@@ -39,10 +39,10 @@
         <div class="alert alert-danger" role="alert">
             Desconectado
         </div>
-    <div class="btn-group-vertical" role="group", aria-label="menu">
-        <button type="button" class="btn btn-info"> <%= link_to "Cadastro", new_user_path %> </button>
+    <div class="btn-group-vertical" role="group", aria-label='menu'>
+        <button type="button" class="btn btn-info"><%= link_to "Cadastro", new_user_path %></button>
         <button type="button" class="btn btn-info">Fale Conosco</button>
-        <%= link_to "Comentários", comentarios_url %>
+        <button type="button" class="btn btn-info"><%= link_to "Comentários", comentarios_url %></button>
     </div>
 </body>
 <%= yield %>

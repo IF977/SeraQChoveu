@@ -35,14 +35,14 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'rspec-rails'
+  gem "rspec-rails", :github => "rspec/rspec-rails"
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem "rspec-core", :github => "rspec/rspec-core"
   gem "rspec-expectations", :github => "rspec/rspec-expectations"
   gem "rspec-mocks", :github => "rspec/rspec-mocks"
   gem "rspec-support", :github => "rspec/rspec-support"
   gem 'factory_girl_rails', '~> 4.5.0'
-  
+
 end
 
 group :test do
@@ -53,7 +53,7 @@ group :test do
   gem 'faker', '~> 1.6.1'
   gem 'capybara'
   gem 'capybara-webkit'
-  
+
 end
 
 group :development do

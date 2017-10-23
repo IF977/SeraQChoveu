@@ -10,7 +10,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -40,11 +40,10 @@
             Desconectado
         </div>
     <div class="btn-group-vertical" role="group", aria-label='menu'>
-        <button type="button" class="btn btn-info"><%= link_to "Cadastro", new_user_path %></button>
+        <button type="button" class="btn btn-info"><%= link_to "Cadastro", '/cadastro' %></button>
         <button type="button" class="btn btn-info">Fale Conosco</button>
         <button type="button" class="btn btn-info"><%= link_to "Comentários", comentarios_url %></button>
     </div>
-</body>
-<%= yield %>
+    <%= yield %>
 </body>
 </html>

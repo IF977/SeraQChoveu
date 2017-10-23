@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resources :users
+  get  '/cadastro',  to: 'users#new'
 end

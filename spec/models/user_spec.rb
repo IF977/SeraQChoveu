@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
     before(:each) do
-        @user = User.create!(name: "Samir", email: "testando@lalala.com", password_digest: 123456)
+        @user = User.create!(name: "Samir", email: "testando@lalala.com",
+        password: 'enoisbrother', password_confirmation: 'enoisbrother')
     end
 
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:email) }
-    it { is_expected.to validate_presence_of(:password_digest) }
 
     it 'deve ser um usuário válido' do
         expect(@user.valid?).to be true
@@ -46,4 +46,20 @@ RSpec.describe User, type: :model do
         expect(duplicado.valid?).to be false
     end
 
+    it 'email deve ser salvo minusculo' do
+        email_errado = 'SaMiR@TeStAnDO.COm'
+        @user.email = email_errado
+        @user.save
+        expect(@user.email).to eq(email_errado.downcase)
+    end
+
+    it 'senha deve estar presente' do
+        @user.password = @user.password_confirmation = ' ' * 8
+        expect(@user.valid?).to be false
+    end
+
+    it 'senha deve ter no minimo 6 caracteres' do
+        @user.password = @user.password_confirmation = 's' * 5
+        expect(@user.valid?).to be false
+    end
 end

@@ -5,19 +5,17 @@ Feature: Cadastro
     
     @javascript
     Scenario Outline: Criar uma nova conta
-        Given Estou na página inicial
-        When eu clique em cadastro
-        And eu preencher <nome> no campo de Login
-        And eu preencher <e-mail> no campo de e-mail
-        And eu preencher <senha> no campo de senha
-        And eu preencher <repetir senha> no campo de repetir senha
-        And eu preencher <cidade> no campo de cidade
-        And eu preencher <data de nascimento> no campo de data de nascimento
-        And clicar cadastrar
+        Given Estou na pagina inicial
+        When Eu clicar no botao cadastro
+        And Eu preencher <nome> com login
+        And Eu preencher <e-mail> com email
+        And Eu preencher <senha> com senha
+        And Eu preencher <repetir senha> com repetir senha
+        And clicar no botao salvar
         Then cadastro completo
     
     Examples:
-        | nome | e-mail | senha | repetir senha | cidade | data de nascimento |
-        | Johnny | johnny@gmail.com | asdf | asdf | Ipojuca | 20/12/1990 |
-        | Samir | samir@hotmail.com | hjkl | hjkl | Recife | 11/11/1994 |
+        |nome|e-mail|senha|repetir senha|
+        |Johnny|johnny@gmail.com|asdf|asdf|
+        |Samir|samir@hotmail.com|hjkl|hjkl|
         

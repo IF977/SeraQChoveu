@@ -5,15 +5,15 @@ Feature: Adicionar comentário
 
     @javascript
     Scenario Outline: Adicionar comentário
-        Given Estou na página inicial
-        When eu clique em comentários
-        And eu preencher <usuário> no campo Usuario
-        And eu preencher <texto> no campo Texto
-        And eu preencher <rate> no campo Rate
-        And clicar Enviar
-        Then comentário enviado
+        Given Eu estou na pagina inicial
+        When Eu clicar no botao comentarios
+        And Eu preencher <usuario> com usuario
+        And Eu preencher <texto> com comentario
+        And Eu preencher <rate> com avaliacao
+        And clicar no botao enviar
+        Then comentario enviado
     
     Examples:
-        |usuário|texto|rate|
-        |Johnny|asdfaf asfgag agag asg www|5|
-        |Samir|ddd aaa qqq rrrrr|2|
+        |usuario|texto|rate|
+        |kohnny|asdfaf asfgag agag asg www|5|
+        | Samir | ddd aaa qqq rrrrr | 2 |

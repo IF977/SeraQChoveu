@@ -14,7 +14,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td>|| <%= user.name %> |</td>
+        <td>| <%= user.name %> |</td>
         <td>| <%= user.email %> |</td>
         <td>| <%= link_to 'Mostrar Usuário', user %> |</td>
         <td>| <%= link_to 'Editar Usuário', edit_user_path(user) %> |</td>

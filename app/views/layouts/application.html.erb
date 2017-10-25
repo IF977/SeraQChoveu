@@ -27,7 +27,6 @@
                     <% end %>
                 </h1>
             </div>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar navbar-right">
                     <li><%= link_to "users/auth/facebook" do %> <%= image_tag('facebook.png', width: '40', height: '40', class: 'image-circle')%><%end%></li>
@@ -41,7 +40,7 @@
         </div>
     <div class="btn-group-vertical" role="group", aria-label='menu'>
         <button type="button" class="btn btn-info"><%= link_to "Cadastro", '/cadastro' %></button>
-        <button type="button" class="btn btn-info">Fale Conosco</button>
+        <button type="button" class="btn btn-info"><%= link_to "Fale Conosco", '/contatos/new' %></button>
         <button type="button" class="btn btn-info"><%= link_to "Comentários", comentarios_url %></button>
     </div>
     <%= yield %>

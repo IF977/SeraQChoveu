@@ -83,9 +83,15 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
+    autoprefixer-rails (7.1.6)
+      execjs
     backports (3.10.3)
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap (4.0.0.beta2.1)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.3, < 2)
+      sass (>= 3.5.2)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.4)
@@ -172,6 +178,7 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
+    popper_js (1.12.5)
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -256,6 +263,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bootstrap (~> 4.0.0.beta2.1)
   byebug
   capybara
   capybara-webkit

@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Adding bootstrap gem
 gem 'bootstrap-sass', '3.3.7'
+gem 'jquery-rails'
 
 
 # Use Capistrano for deployment

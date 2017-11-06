@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
   def index
-    flash[:notice] = "Mensagem enviada com sucesso!!"
+  end
+
+  def about
+  end
+
+  def busca
   end
 end

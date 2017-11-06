@@ -14,7 +14,7 @@ O SeraQChoveu? é um Software as a Service (SaaS) que fornece ao usuário dados 
 * Calcula com base na data informada e nos dados disponíveis a quantidade de ocorrências de chuva nos últimos 30 (trinta) anos;
 * Retorna ao usuário tais informações com a probabilidade de ocorrência de chuvas no período informado.
 
-Link da aplicação no Heroku: (SeraQChoveu?)[http://seraqchoveu.herokuapp.com]
+Link da aplicação no Heroku: http://seraqchoveu.herokuapp.com
 
 ## Justificativa
 As férias são uma das épocas mais aguardadas do ano por qualquer pessoa independente da profissão, seja estudante, professor, engenheiro de software... Planejar as férias nem sempre é uma tarefa fácil, envolve escolher um local, estadia, compra de passagem, traçar um roteiro, enfim, se programar. É frustrante despender tanto tempo planejando, criar expectativa e, ao chegar no local, começa aquela chuva que não acaba mais! O SeraQChoveu? vem pra ajudar aqueles que querem planejar suas viagens com mais garantia.

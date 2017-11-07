@@ -1,1 +1,46 @@
 <% provide(:title, "Página Inicial") %>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <%= image_tag "arco-iris.jpg", class: "carousel-image"%>
+          <div class="carousel-caption d-none d-md-block">
+              <h3>Quer viajar?</h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= image_tag 'guarda-chuva.jpg', class: "carousel-image"%>
+          <div class="carousel-caption">
+              <h3>Descubra a probabilidade de chuva</h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= image_tag 'oculos-de-sol.jpg', class: "carousel-image"%>
+          <div class="carousel-caption">
+              <h3>E curta suas férias como você merece!</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+</div>

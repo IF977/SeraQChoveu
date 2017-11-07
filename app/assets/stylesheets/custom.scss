@@ -63,6 +63,7 @@ p {
 /* header */
 
 #logo {
+  position: fixed;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -165,4 +166,12 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.carousel-caption {
+    color: white;
+}
+
+#myCarousel{
+    position: relative;
 }

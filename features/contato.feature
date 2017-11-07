@@ -6,11 +6,11 @@ Feature: Fale Conosco
     @javascript
     Scenario Outline: Fale Conosco
         Given Eu estou na pagina inicial
-        When Eu clicar no botao fale conosco
+        When Eu clicar no botao contato
         And Eu preencher <nome> com nome
         And Eu preencher <e-mail> com email
         And Eu preencher <mensagem> com mensagem
-        And clicar no botao enviar
+        And Eu clicar no botao enviar
         Then mensagem enviada
         
       Examples:

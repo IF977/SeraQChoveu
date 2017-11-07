@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/busca', to: 'pages#busca'
   resources :users
   resources :comentarios
+  get '/contatos',  to: 'contatos#new'
+  get 'root_path', to: 'contatos#create'
 end

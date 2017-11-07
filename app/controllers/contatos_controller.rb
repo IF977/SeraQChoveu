@@ -28,7 +28,8 @@ class ContatosController < ApplicationController
 
     respond_to do |format|
       if @contato.save
-        format.html { redirect_to root_path, notice: 'Mensagem enviada com sucesso!' }
+        flash[:success] = "Mensagem enviada com sucesso!"
+        format.html { redirect_to @root_url}
         format.json { render :root_path, status: :created, location: @contato }
       else
         format.html { render :new }
@@ -39,7 +40,7 @@ class ContatosController < ApplicationController
 
   # PATCH/PUT /contatos/1
   # PATCH/PUT /contatos/1.json
-=begin def update
+def update
     respond_to do |format|
       if @contato.update(contato_params)
         format.html { redirect_to @contato, notice: 'Contato was successfully updated.' }
@@ -60,7 +61,6 @@ class ContatosController < ApplicationController
       format.json { head :no_content }
     end
   end
-=end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contato

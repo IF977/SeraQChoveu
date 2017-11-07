@@ -7,8 +7,8 @@ Feature: Adicionar comentário
     Scenario Outline: Adicionar comentário
         Given Eu estou na pagina inicial
         When Eu clicar no botao comentarios
-        And Eu preencher <usuario> com usuario
-        And Eu preencher <texto> com comentario
+        And Eu preencher <nome> com nome
+        And Eu preencher <mensagem> com mensagem
         And Eu preencher <rate> com avaliacao
         And clicar no botao enviar
         Then comentario enviado

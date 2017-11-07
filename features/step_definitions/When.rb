@@ -1,6 +1,6 @@
 When (/^[Eu ]*clicar no botao cadastro$/) do
-	click_button ("Cadastro")
-    visit "/users/new"
+	click_on ("Cadastro")
+    visit "/cadastro"
 end
 
 When (/^[Eu ]*preencher ([^"]*)com nome$/) do |nome|
@@ -15,16 +15,16 @@ When (/^[Eu ]*preencher ([^"]*)com senha$/) do |senha|
 	page.fill_in "Senha", :with => 'senha'
 end
 
-When (/^[Eu ]*preencher ([^"]*)com repetir senha$/) do |rsenha|
+When (/^[Eu ]*preencher ([^"]*)com confirme a senha$/) do |rsenha|
 	page.fill_in "Confirme a senha", :with => 'rsenha'
 end
 
-When (/^[Eu ]*clicar no botao salvar/) do	
-	click_button("Salvar")
+When (/^[Eu ]*clicar no botao criar minha conta/) do	
+	click_button("Criar minha conta")
 end
 
 When (/^[Eu ]*clicar no botao comentarios$/) do
-	click_button ("Comentários")
+	click_on ("Comentários")
     visit "/comentarios/new"
 end
 
@@ -40,13 +40,24 @@ When (/^[Eu ]*preencher ([^"]*)com avaliacao$/) do |rate|
 end
 
 When (/^[Eu ]*clicar no botao enviar$/) do	
-	click_button("Enviar")
+	click_on("Enviar")
 end
 
-When (/^[Eu ]*clicar no botao fale conosco$/) do
-	click_button ("Fale Conosco")
-    visit "/contatos/new"
+When (/^[Eu ]*clicar no botao contato$/) do
+	click_on ("Contato")
+    visit "/contatos"
 end
+
+When (/^[Eu ]*clicar no botao login$/) do
+	click_on ("Login")
+    visit "/entrar"
+end
+
+When (/^[Eu ]*clicar no botao entrar$/) do
+	click_on ("Entrar")
+    visit "/entrar"
+end
+
 
 #https://stackoverflow.com/questions/20134085/how-to-select-option-in-drop-down-using-capybara
 #https://stackoverflow.com/questions/11498575/get-select-value-of-dropdown-for-capybara-testing

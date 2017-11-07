@@ -5,13 +5,13 @@ Feature: Cadastro
     
     @javascript
     Scenario Outline: Criar uma nova conta
-        Given Estou na pagina inicial
+        Given Eu estou na pagina inicial
         When Eu clicar no botao cadastro
-        And Eu preencher <nome> com login
+        And Eu preencher <nome> com nome
         And Eu preencher <e-mail> com email
         And Eu preencher <senha> com senha
-        And Eu preencher <repetir senha> com repetir senha
-        And clicar no botao salvar
+        And Eu preencher <repetir senha> com confirme a senha
+        And Eu clicar no botao criar minha conta
         Then cadastro completo
     
     Examples:

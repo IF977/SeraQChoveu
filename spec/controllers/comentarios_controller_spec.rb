@@ -28,12 +28,12 @@ RSpec.describe ComentariosController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Comentario. As you add validations to Comentario, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+  let(:valid_attributes) {{usuario: "Johnnyboy", texto: "umtestinhoidiota",
+  rate: 5}
   }
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+  let(:invalid_attributes) {{usuario: "  em  branco  ", texto: "     ",
+  rate: -251}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -79,11 +79,6 @@ RSpec.describe ComentariosController, type: :controller do
           post :create, params: {comentario: valid_attributes}, session: valid_session
         }.to change(Comentario, :count).by(1)
       end
-
-      it "redirects to the created comentario" do
-        post :create, params: {comentario: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(Comentario.last)
-      end
     end
 
     context "with invalid params" do
@@ -96,21 +91,17 @@ RSpec.describe ComentariosController, type: :controller do
 
   describe "PUT #update" do
     context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+      let(:new_attributes) {{usuario: "Samboy", texto: "umtestinhobesta",
+      rate:4}
       }
 
       it "updates the requested comentario" do
         comentario = Comentario.create! valid_attributes
         put :update, params: {id: comentario.to_param, comentario: new_attributes}, session: valid_session
         comentario.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "redirects to the comentario" do
-        comentario = Comentario.create! valid_attributes
-        put :update, params: {id: comentario.to_param, comentario: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(comentario)
+        expect(comentario.usuario).to eq ("Samboy")
+        expect(comentario.texto).to eq ("umtestinhobesta")
+        expect(comentario.rate).to eq (4)
       end
     end
 

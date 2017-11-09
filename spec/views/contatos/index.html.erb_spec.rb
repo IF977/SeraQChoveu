@@ -4,22 +4,16 @@ RSpec.describe "contatos/index", type: :view do
   before(:each) do
     assign(:contatos, [
       Contato.create!(
-        :nome => "Nome",
-        :email => "Email",
-        :mensagem => "MyText"
+        :nome => "Eraumavez",
+        :email => "um@lugarzinho.nonada",
+        :mensagem => "Com sabor de chocolate :)"
       ),
       Contato.create!(
-        :nome => "Nome",
-        :email => "Email",
-        :mensagem => "MyText"
+        :nome => "Upaupa",
+        :email => "cavalinho@daledale.com.br",
+        :mensagem => "Nossasenhora"
       )
     ])
   end
-
-  it "renders a list of contatos" do
-    render
-    assert_select "tr>td", :text => "Nome".to_s, :count => 2
-    assert_select "tr>td", :text => "Email".to_s, :count => 2
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
-  end
+  #adicionar testes
 end

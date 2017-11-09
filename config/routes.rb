@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   delete '/sair',  to: 'sessions#destroy'
   get  '/cadastro',  to: 'users#new'
   post '/cadastro', to: 'users#create'
+  get '/editar', to: 'users#edit'
   get '/sobre', to: 'pages#about'
   get '/busca', to: 'pages#busca'
   resources :users
   resources :comentarios
-  get '/contatos',  to: 'contatos#new'
-  get 'root_path', to: 'contatos#create'
+  resources :contatos
 end

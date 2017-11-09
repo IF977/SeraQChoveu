@@ -3,16 +3,16 @@ require 'rails_helper'
 RSpec.describe "contatos/show", type: :view do
   before(:each) do
     @contato = assign(:contato, Contato.create!(
-      :nome => "Nome",
-      :email => "Email",
-      :mensagem => "MyText"
+      :nome => "Bemtriste",
+      :email => "estou@pqtomefudendo.com",
+      :mensagem => "jesusmesalva"
     ))
   end
 
   it "renders attributes in <p>" do
     render
-    expect(rendered).to match(/Nome/)
-    expect(rendered).to match(/Email/)
-    expect(rendered).to match(/MyText/)
+    expect(rendered).to match(/Bemtriste/)
+    expect(rendered).to match(/estou@pqtomefudendo.com/)
+    expect(rendered).to match(/jesusmesalva/)
   end
 end

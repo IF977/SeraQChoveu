@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe "contatos/edit", type: :view do
   before(:each) do
     @contato = assign(:contato, Contato.create!(
-      :nome => "MyString",
-      :email => "MyString",
-      :mensagem => "MyText"
+      :nome => "Vanessa",
+      :email => "irma@dodoi.com",
+      :mensagem => "aleluia irmão"
     ))
   end
 

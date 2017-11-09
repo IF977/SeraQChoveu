@@ -99,9 +99,7 @@ RSpec.describe ComentariosController, type: :controller do
         comentario = Comentario.create! valid_attributes
         put :update, params: {id: comentario.to_param, comentario: new_attributes}, session: valid_session
         comentario.reload
-        expect(comentario.usuario).to eq ("Samboy")
-        expect(comentario.texto).to eq ("umtestinhobesta")
-        expect(comentario.rate).to eq (4)
+        expect(comentario).to have_attributes(:usuario => "Samboy", :texto => "umtestinhobesta", :rate => 4)
       end
     end
 

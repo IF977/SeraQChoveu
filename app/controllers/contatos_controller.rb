@@ -29,7 +29,7 @@ class ContatosController < ApplicationController
     respond_to do |format|
       if @contato.save
         flash[:success] = "Mensagem enviada com sucesso!"
-        format.html { redirect_to @root_url}
+        format.html { redirect_to @contato}
         format.json { render :root_path, status: :created, location: @contato }
       else
         format.html { render :new }

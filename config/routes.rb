@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :users
   resources :comentarios
   resources :contatos
+  resources :password_resets, only: [:new, :create, :edit, :update]
 end

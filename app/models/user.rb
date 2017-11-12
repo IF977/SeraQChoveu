@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
-    attr_accessor :remember_token
+    attr_accessor :remember_token, :reset_token
     before_save {email.downcase!}
     validates :name, presence: true, length: {maximum: 50}
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -35,5 +35,29 @@ class User < ApplicationRecord
     # Esquece um usuario, ou seja, desfaz o metodo remember
     def forget
         update_attribute(:remember_digest, nil)
+    end
+
+    # Seta os atributos de password reset.
+    def create_reset_digest
+        self.reset_token = User.new_token
+        update_attribute(:reset_digest,  User.digest(reset_token))
+        update_attribute(:reset_sent_at, Time.zone.now)
+    end
+
+    # Envia o email para reset de password.
+    def send_password_reset_email
+        UserMailer.password_reset(self).deliver_now
+    end
+
+    # Returna true se o reset de senha expirou.
+    def password_reset_expired?
+        reset_sent_at < 2.hours.ago
+    end
+
+    private
+
+    # Converte email para lower-case.
+    def downcase_email
+      self.email = email.downcase
     end
 end

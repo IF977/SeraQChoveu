@@ -32,6 +32,14 @@ textarea {
   }
 }
 
+.carousel-caption {
+    color: white;
+}
+
+#myCarousel{
+    position: relative;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -168,10 +176,16 @@ input {
   }
 }
 
-.carousel-caption {
-    color: white;
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
 }
 
-#myCarousel{
-    position: relative;
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }

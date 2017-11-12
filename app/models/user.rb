@@ -27,9 +27,10 @@ class User < ApplicationRecord
     end
 
     # Retorna true se o token passado como parametro bate com a hash criptografada
-    def authenticated?(remember_token)
-        return false if remember_digest.nil?
-        BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    def authenticated?(attribute, token)
+      digest = send("#{attribute}_digest")
+      return false if digest.nil?
+      BCrypt::Password.new(digest).is_password?(token)
     end
 
     # Esquece um usuario, ou seja, desfaz o metodo remember
@@ -59,5 +60,10 @@ class User < ApplicationRecord
     # Converte email para lower-case.
     def downcase_email
       self.email = email.downcase
+    end
+
+    def create_activation_digest
+        self.activation_token  = User.new_token
+        self.activation_digest = User.digest(activation_token)
     end
 end

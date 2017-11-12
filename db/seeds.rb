@@ -5,6 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!(name:  "Samir Ferreira",
+             email: "svaf2@cin.ufpe.br",
+             password:              "seraqchoveu",
+             password_confirmation: "seraqchoveu",
+             admin: true)
+
+99.times do |n|
+  name  = Faker::Name.name
+  email = "exemplo-#{n+1}@seraqchoveu.app"
+  password = "password"
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password)
+end
+
+=begin
 Cidade.create(nome: 'Recife', dia: '01/01', precipitacao: '1.0', ocorrencias: '15')
 Cidade.create(nome: 'Recife', dia: '01/02', precipitacao: '4.0', ocorrencias: '14')
 Cidade.create(nome: 'Recife', dia: '01/03', precipitacao: '10.0', ocorrencias: '12')
@@ -2940,3 +2958,4 @@ Cidade.create(nome: 'São Luís', dia: '31/07', precipitacao: '5.0', ocorrencias
 Cidade.create(nome: 'São Luís', dia: '31/08', precipitacao: '0.8', ocorrencias: '1')
 Cidade.create(nome: 'São Luís', dia: '31/10', precipitacao: '8.0', ocorrencias: '3')
 Cidade.create(nome: 'São Luís', dia: '31/12', precipitacao: '9.0', ocorrencias: '12')
+=end

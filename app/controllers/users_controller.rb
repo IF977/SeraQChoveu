@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :usuario_logado, only: [:index, :edit, :update, :destroy]
+  before_action :usuario_correto, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page])
   end
 
   # GET /users/1
@@ -20,6 +23,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+      @user = User.find(params[:id])
   end
 
   # POST /users
@@ -75,5 +79,22 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def usuario_logado
+        unless logado?
+            store_location
+            flash[:danger] = "Por favor, entre com sua conta."
+            redirect_to entrar_url
+        end
+    end
+
+    def usuario_correto
+        @user = User.find(params[:id])
+        redirect_to(root_url) unless current_user?(@user)
+    end
+
+    def admin_user
+        redirect_to(root_url) unless current_user.admin?
     end
 end

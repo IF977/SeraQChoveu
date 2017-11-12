@@ -32,6 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Adding bootstrap gem
 gem 'bootstrap-sass', '3.3.7'
 gem 'jquery-rails'
+gem 'faker', '1.7.3'
+gem 'will_paginate', '3.1.5'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 
 # Use Capistrano for deployment
@@ -54,7 +57,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 3.0', require: false
-  gem 'faker', '~> 1.6.1'
   gem 'capybara'
   gem 'capybara-webkit'
 

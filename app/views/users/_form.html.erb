@@ -1,0 +1,17 @@
+<%= form_for(@user) do |f| %>
+  <%= render 'users/error_messages' %>
+
+  <%= f.label :name, "Nome:" %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :email, "E-mail:" %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password, "Senha:" %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation, "Confirme a senha:" %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <%= f.submit yield(:text_button), class: "btn btn-primary" %>
+<% end %>

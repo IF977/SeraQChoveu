@@ -11,6 +11,11 @@ module SessionsHelper
       cookies.permanent[:remember_token] = user.remember_token
   end
 
+  # Retorna true se o usuario logado e' o current_user, falso caso contrario
+  def current_user?(user)
+      user == current_user
+  end
+
   # Retorna o usuario logado, se existir
   # Se nao estiver logado, loga e retorna o usuario correspondente ao cookie remember_token
   def current_user
@@ -43,6 +48,17 @@ module SessionsHelper
       session.delete(:user_id)
       @current_user = nil
       flash[:danger] = 'Logoff realizado!'
+  end
+
+  # Redireciona para a url pretendida (ou para a default).
+  def redirect_back_or(default)
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
+  # Guarda a URL que esta tentando ser acessada.
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
   end
 
 end

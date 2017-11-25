@@ -33,7 +33,6 @@ Cidade.create(nome: 'Recife', dia: '01/07', precipitacao: '16.0', ocorrencias: '
 Cidade.create(nome: 'Recife', dia: '01/08', precipitacao: '16.0', ocorrencias: '24')
 Cidade.create(nome: 'Recife', dia: '01/09', precipitacao: '7.0', ocorrencias: '21')
 Cidade.create(nome: 'Recife', dia: '01/10', precipitacao: '3.0', ocorrencias: '9')
-=begin
 Cidade.create(nome: 'Recife', dia: '01/11', precipitacao: '1.0', ocorrencias: '9')
 Cidade.create(nome: 'Recife', dia: '01/12', precipitacao: '1.0', ocorrencias: '10')
 Cidade.create(nome: 'Recife', dia: '02/01', precipitacao: '5.0', ocorrencias: '15')
@@ -2959,4 +2958,3 @@ Cidade.create(nome: 'São Luís', dia: '31/07', precipitacao: '5.0', ocorrencias
 Cidade.create(nome: 'São Luís', dia: '31/08', precipitacao: '0.8', ocorrencias: '1')
 Cidade.create(nome: 'São Luís', dia: '31/10', precipitacao: '8.0', ocorrencias: '3')
 Cidade.create(nome: 'São Luís', dia: '31/12', precipitacao: '9.0', ocorrencias: '12')
-=end

@@ -1,7 +1,36 @@
+<% provide(:title, "Resultados da busca") %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 <% if @cidades.blank? %>
-  <h4>Não existem cidades com o texto informado: <%= params[:cidade] %>.</h4>
+  <h4>Não existem cidades com o texto informado: <%= params[:cidade] %></h4>
 <% else %>
+<h2>Mostando resultados para a cidade: <%= params[:cidade] %></h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Data:</th>
+      <th>Precipitação (em mm):</th>
+      <th>Ocorrências (dias) nos últimos 30 anos:</th>
+    </tr>
+  </thead>
+    <% teste = false %>
+    <% cont = 0 %>
     <% @cidades.each do |cidade| %>
-    <ul><%= "#{cidade.nome} #{cidade.dia} #{cidade.precipitacao} #{cidade.ocorrencias}" %></ul>
+        <% if cidade.dia === params[:data] %>
+            <% teste = true %>
+        <% end %>
+        <% if teste && cont < 7 %>
+          <tbody align="center">
+            <tr>
+              <td><%= "#{cidade.dia}" %></td>
+              <td><%= "#{cidade.precipitacao}" %></td>
+              <td><%= "#{cidade.ocorrencias}" %></td>
+            </tr>
+            <% cont += 1 %>
+        <% end %>
     <% end %>
+</tbody>
+</table>
 <% end %>
+</div>
+</div>

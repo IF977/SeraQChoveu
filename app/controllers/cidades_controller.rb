@@ -2,7 +2,7 @@ class CidadesController < ApplicationController
 
     def index
         if params[:cidade]
-            @cidades = Cidade.search(params[:cidade]).order("created_at DESC")
+            @cidades = Cidade.search(params[:cidade]).order("created_at ASC")
         else
             @cidades = Cidade.all.order("created_at DESC")
         end

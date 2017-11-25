@@ -67,3 +67,13 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSGVPIVj04qsocZ79OWxcxiMeYyDkL4Mg&callback=initMap">
     </script>
 </div>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+      <%= form_tag(cidades_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :cidade, params[:cidade], placeholder: "Digite a cidade" %>
+        <%= submit_tag "Procurar", :nome => nil, class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<% if @cidades.blank? %>
+  <h4>Não existem cidades com o texto informado: <%= params[:cidade] %>.</h4>
+<% else %>
+    <% @cidades.each do |cidade| %>
+    <ul><%= "#{cidade.nome} #{cidade.dia} #{cidade.precipitacao} #{cidade.ocorrencias}" %></ul>
+    <% end %>
+<% end %>

@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/busca', to: 'pages#busca'
   get '/faleconosco', to: 'contatos#new'
   resources :users
-  resources :comentarios
   resources :contatos
   resources :password_resets, only: [:new, :create, :edit, :update]
   get '/cidades', to: 'cidades#index'

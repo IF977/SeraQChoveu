@@ -27,14 +27,6 @@ ActiveRecord::Schema.define(version: 20171126030704) do
     t.string "fortes"
   end
 
-  create_table "comentarios", force: :cascade do |t|
-    t.string "usuario"
-    t.text "texto"
-    t.integer "rate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "contatos", force: :cascade do |t|
     t.string "nome"
     t.string "email"

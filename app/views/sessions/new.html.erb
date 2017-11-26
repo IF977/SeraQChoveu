@@ -1,4 +1,5 @@
 <% provide(:title, "Entrar") %>
+
 <h1>Entrar</h1>
 
 <div class="row">
@@ -18,8 +19,10 @@
       <% end %>
 
       <%= f.submit "Entrar", class: "btn btn-primary" %>
+      <%= link_to 'auth/facebook' do %>
+        <%= image_tag 'facebook.png', :align => "middle", :class => "style_image" %>
+      <% end %>
     <% end %>
-
     <p>Novo Usuário? <%= link_to "Cadastre-se!", cadastro_path %></p>
   </div>
 </div>

@@ -5,7 +5,11 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= gravatar_for @user %>
+        <% if @user.image %>
+            <%= image_tag(@user.image) %>
+        <% else %>
+            <%= gravatar_for @user %>
+        <% end %>
         <%= @user.name %>
       </h1>
     </section>
@@ -19,5 +23,5 @@
 
 <p>
   <strong>Email:</strong>
-  <%= @user.email %>
+    <%= @user.email %>
 </p>

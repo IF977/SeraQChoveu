@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   get '/sobre', to: 'pages#about'
   get '/busca', to: 'pages#busca'
   get '/faleconosco', to: 'contatos#new'
+  get 'auth/facebook/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
   resources :users
   resources :contatos
   resources :password_resets, only: [:new, :create, :edit, :update]
   get '/cidades', to: 'cidades#index'
+
 end

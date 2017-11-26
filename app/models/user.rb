@@ -56,6 +56,16 @@ class User < ApplicationRecord
         reset_sent_at < 2.hours.ago
     end
 
+    def self.create_with_omniauth(auth)
+        user = find_or_create_by(uid: auth['uid'], provider:  auth['provider'])
+        user.email = "#{auth['uid']}@#{auth['provider']}.com"
+        user.password = auth['uid']
+        user.name = auth['info']['name']
+        user.image = auth['info']['image']
+        user.save!
+        user
+    end
+
     private
 
     # Converte email para lower-case.

@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   get '/faleconosco', to: 'contatos#new'
   get 'auth/facebook/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
+  get '/cidades', to: 'cidades#index'
   resources :users
   resources :contatos
   resources :password_resets, only: [:new, :create, :edit, :update]
-  get '/cidades', to: 'cidades#index'
 
 end

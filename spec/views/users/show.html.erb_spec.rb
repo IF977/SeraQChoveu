@@ -9,5 +9,9 @@ RSpec.describe "users/show", type: :view do
       :password_confirmation => "daleboyenois"
     ))
   end
-  #adicionar testes
+  it "render atributos " do
+    render
+    expect(rendered).to match(/Samir/)
+    expect(rendered).to match(/samir@testando.com/)
+  end
 end

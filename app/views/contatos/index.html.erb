@@ -1,5 +1,6 @@
 <% provide(:title, "Contatos") %>
 
+<% if current_user && current_user.admin? %>
 <h1>Contatos</h1>
 <br>
 <div class="row">
@@ -27,3 +28,8 @@
 </table>
 </div>
 </div>
+<% else %>
+<div class="alert alert-danger">
+    Apenas administradores podem acessar esta página
+</div>
+<% end %>

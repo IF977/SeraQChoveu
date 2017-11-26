@@ -5,7 +5,21 @@
     </div>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+        <% if msg === "Password can't be blank" %>
+            <li>Você deve inserir uma senha</li>
+        <% elsif msg === "Name can't be blank" %>
+            <li>Você deve inserir um nome</li>
+        <% elsif msg === "Email can't be blank" %>
+            <li>Você deve inserir um email</li>
+        <% elsif msg === "Email is invalid" %>
+            <li>O email é inválido</li>
+        <% elsif msg === "Password confirmation doesn't match Password" %>
+            <li>A confirmação de senha não é igual a senha</li>
+        <% elsif msg === "Password is too short (minimum is 6 characters)" %>
+            <li>A senha é muito curta (mínimo 6 caracteres)</li>
+        <% else %>
+            <li> <%= msg %> </li>
+        <% end %>
     <% end %>
     </ul>
   </div>

@@ -11,6 +11,21 @@ User.create!(name:  "Samir Ferreira",
              password:              "seraqchoveu",
              password_confirmation: "seraqchoveu",
              admin: true)
+User.create!(name:  "Johnny Mayron",
+            email: "jmsf2@cin.ufpe.br",
+            password:              "seraqchoveu",
+            password_confirmation: "seraqchoveu",
+            admin: true)
+User.create!(name:  "Ayrton Fernando",
+            email: "afbs@cin.ufpe.br",
+            password:              "seraqchoveu",
+            password_confirmation: "seraqchoveu",
+            admin: true)
+User.create!(name:  "Vanessa Vieira",
+            email: "vvc@cin.ufpe.br",
+            password:              "seraqchoveu",
+            password_confirmation: "seraqchoveu",
+            admin: true)
 
 99.times do |n|
   name  = Faker::Name.name

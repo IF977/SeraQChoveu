@@ -15,3 +15,16 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 50) {
+	    $("header").css("background" , "#eaeaea");
+	  }
+
+	  else{
+		  $("header").css("background" , "transparent");
+	  }
+  })
+})

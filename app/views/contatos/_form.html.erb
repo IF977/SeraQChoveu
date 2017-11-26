@@ -1,11 +1,22 @@
 <%= form_with(model: contato, local: true) do |form| %>
   <% if contato.errors.any? %>
     <div id="error_explanation">
-      <h2>Opa! Encontramos <%= pluralize(contato.errors.count, "erro") %> </h2>
-
-      <ul>
-      <% contato.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <div class="alert alert-danger">
+            <h2>Opa! Encontramos <%= pluralize(contato.errors.count, "erro") %> </h2>
+        </div>
+        <ul>
+      <% contato.errors.full_messages.each do |msg| %>
+          <% if msg === "Mensagem can't be blank" %>
+              <li>Você deve inserir uma mensagem</li>
+          <% elsif msg === "Nome can't be blank" %>
+              <li>Você deve inserir um nome</li>
+          <% elsif msg === "Email can't be blank" %>
+              <li>Você deve inserir um email</li>
+          <% elsif msg === "Email is invalid" %>
+              <li>O email é inválido</li>
+          <% else %>
+              <li> <%= msg %> </li>
+          <% end %>
       <% end %>
       </ul>
     </div>

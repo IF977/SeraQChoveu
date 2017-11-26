@@ -2,15 +2,19 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 <% if @cidades.blank? %>
-  <h4>Não existem cidades com o texto informado: <%= params[:cidade] %></h4>
+  <h4>Por gentileza, faça uma nova busca inserindo os dados corretos!</h4>
+  <br>
 <% else %>
-<h2>Mostando resultados para a cidade: <%= params[:cidade] %></h2>
+<h2>Mostando resultados para a cidade: <%= @cidades[0].nome %></h2>
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Data:</th>
-      <th>Precipitação (em mm):</th>
-      <th>Ocorrências (dias) nos últimos 30 anos:</th>
+      <th class="text-center">Data:</th>
+      <th class="text-center">Precipitação em mm:</th>
+      <th class="text-center">Ocorrências nos últimos 30 anos:</th>
+      <th class="text-center">Chuvas Fracas:</th>
+      <th class="text-center">Chuvas Moderadas:</th>
+      <th class="text-center">Chuvas Fortes:</th>
     </tr>
   </thead>
     <% teste = false %>
@@ -25,6 +29,9 @@
               <td><%= "#{cidade.dia}" %></td>
               <td><%= "#{cidade.precipitacao}" %></td>
               <td><%= "#{cidade.ocorrencias}" %></td>
+              <td><%= "#{cidade.fracas}" %></td>
+              <td><%= "#{cidade.moderadas}" %></td>
+              <td><%= "#{cidade.fortes}" %></td>
             </tr>
             <% cont += 1 %>
         <% end %>
@@ -32,5 +39,6 @@
 </tbody>
 </table>
 <% end %>
+<p align= "center"><%= link_to "Nova busca", '/busca', class: "btn btn-primary" %></p>
 </div>
 </div>

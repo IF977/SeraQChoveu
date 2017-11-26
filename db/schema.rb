@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115213823) do
+ActiveRecord::Schema.define(version: 20171126030704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 20171115213823) do
     t.string "ocorrencias"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "fracas"
+    t.string "moderadas"
+    t.string "fortes"
   end
 
   create_table "comentarios", force: :cascade do |t|

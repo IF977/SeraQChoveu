@@ -1,10 +1,15 @@
 class CidadesController < ApplicationController
+    require 'date'
 
     def index
-        if params[:cidade]
-            @cidades = Cidade.search(params[:cidade]).order("created_at ASC")
+        if params[:cidade].present?
+            if data_valida?(params[:data])
+                @cidades = Cidade.search(params[:cidade]).order("created_at ASC")
+            else
+                flash.now[:danger] = "Data inválida, digite no formato dd/mm"
+            end
         else
-            @cidades = Cidade.all.order("created_at DESC")
+            flash.now[:danger] = "Cidade inválida, verifique no mapa as cidades disponíveis"
         end
     end
 
@@ -18,8 +23,12 @@ class CidadesController < ApplicationController
 
     private
 
+    def data_valida?(data, format = "%d/%m")
+        Date.strptime(data,format) rescue false
+    end
+
     def cidade_params
-        params.require(:cidade).permit(:nome, :dia, :precipitacao, :ocorrencias)
+        params.require(:cidade).permit(:nome, :dia, :precipitacao, :ocorrencias, :fracas, :moderadas, :fortes)
     end
 
 end

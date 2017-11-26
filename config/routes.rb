@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post '/cadastro', to: 'users#create'
   get '/sobre', to: 'pages#about'
   get '/busca', to: 'pages#busca'
+  get '/faleconosco', to: 'contatos#new'
   resources :users
   resources :comentarios
   resources :contatos

@@ -56,8 +56,9 @@ def update
   # DELETE /contatos/1.json
   def destroy
     @contato.destroy
+    flash[:danger] = "Mensagem deletada!"
     respond_to do |format|
-      format.html { redirect_to contatos_url, notice: 'Contato was successfully destroyed.' }
+      format.html { redirect_to contatos_url }
       format.json { head :no_content }
     end
   end

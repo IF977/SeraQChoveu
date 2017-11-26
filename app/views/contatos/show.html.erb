@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "Sua mensagem") %>
 
 <p>
   <strong>Nome:</strong>
@@ -15,5 +15,4 @@
   <%= @contato.mensagem %>
 </p>
 
-<%= link_to 'Edit', edit_contato_path(@contato) %> |
-<%= link_to 'Back', contatos_path %>
+<%= link_to 'Voltar', root_path, class: "btn btn-primary" %>

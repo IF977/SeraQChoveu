@@ -29,7 +29,7 @@ When (/^[Eu ]*preencher ([^"]*)com confirme a senha$/) do |rsenha|
 	page.fill_in "Confirme a senha", :with => 'rsenha'
 end
 #1
-When (/^[Eu ]*clicar no botao criar minha conta/) do	
+When (/^[Eu ]*clicar no botao criar minha conta/) do
 	click_button("Criar minha conta")
 end
 #2
@@ -41,12 +41,12 @@ end
 When (/^[Eu ]*preencher ([^"]*)com Seu nome$/) do |nome|
 	page.fill_in "Seu nome", :with => 'Seu nome'
 end
-#2 
+#2
 When (/^[Eu ]*preencher ([^"]*)com mensagem$/) do |mensagem|
 	page.fill_in "mensagem", :with => 'mensagem'
 end
 #2 4
-When (/^[Eu ]*clicar no botao enviar$/) do	
+When (/^[Eu ]*clicar no botao enviar$/) do
 	click_on("Enviar")
 end
 #3
@@ -74,7 +74,7 @@ When (/^[Eu ]*preencher ([^"]*)com cidade$/) do |cidade|
 end
 #1 2 3 4
 When (/^[Eu ]*preencher ([^"]*)com data$/) do |data|
-	page.fill_in "Digite a data (formato dd/mm)", :with => 'data'
+	page.fill_in "Escolha a data", :with => 'data'
 end
 When (/^[Eu ]*clicar no botao procurar$/) do
 	click_on ("Procurar")

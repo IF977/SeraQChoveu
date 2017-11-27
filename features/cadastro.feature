@@ -3,7 +3,7 @@ Feature: Cadastro
     Gostaria de criar conta (com informações básicas) de acesso a aplicação
     Para poder acessar as funcionalidades da aplicação
     
-    @javascript
+    
     Scenario Outline: Criar uma nova conta
         Given Eu estou na pagina inicial
         When Eu clicar no botao cadastro
@@ -18,4 +18,6 @@ Feature: Cadastro
         |nome|e-mail|senha|repetir senha|
         |Johnny|johnny@gmail.com|asdf|asdf|
         |Samir|samir@hotmail.com|hjkl|hjkl|
+        |kkkk|||kfkfkf|
+        ||sssss@asdds|ddddd||
         

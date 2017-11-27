@@ -3,19 +3,29 @@ Feature: Fale Conosco
     Gostaria de entrar em contato com o desenvolvedor da aplicação
     Para solicitar informações, fazer reclamações, sugestões, elogiar, etc.
     
-    Scenario Outline: Fale Conosco
-        Given Eu estou logado como usuario
+    Scenario: Fale Conosco
+        Given Eu estou na pagina inicial
         When Eu clicar no botao Fale Conosco
-        And Eu preencher <nome> com Seu nome
-        And Eu preencher <e-mail> com email
-        And Eu preencher <mensagem> com mensagem
+        And Eu preencher <Johnny> com Seu nome
+        And Eu preencher <johny@gmail.com> com email
+        And Eu preencher <asdiioasudi asodiausdoiu asdoiuasdoiu sdoiuasodiu> com mensagem
+        And Eu clicar no botao enviar
+        Then mensagem enviada
+    
+    Scenario: Fale Conosco - Sem mensagem
+        Given Eu estou na pagina inicial
+        When Eu clicar no botao Fale Conosco
+        And Eu preencher <Ayrton> com Seu nome
+        And Eu preencher <ayrton@yahoo.com> com email
+        And Eu preencher  com mensagem
         And Eu clicar no botao enviar
         Then mensagem enviada
         
-      Examples:
-        |nome|e-mail|mensagem|
-        |Johnny|johnny@gmail.com|asdf aosifuapsofiuoapsifuopiasu|
-        |Samir|samir@hotmail.com|hjkl aofiasofiuj 987897h2hgh2jg|
-        |ppppp||657987 789798 454654 12151|
-        ||asofijsaofijsoifj||
-
+    Scenario: Fale Conosco - Sem Nome e E-mail
+        Given Eu estou na pagina inicial
+        When Eu clicar no botao Fale Conosco
+        And Eu preencher com Seu nome
+        And Eu preencher com email
+        And Eu preencher <123444 555 asddfww> com mensagem
+        And Eu clicar no botao enviar
+        Then mensagem enviada

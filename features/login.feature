@@ -3,18 +3,28 @@ Feature: Login
     Gostaria de realizar login na página inicial
     Para poder modificar informações pessoais
     
-    Scenario Outline: Login
+    Scenario: Login
         Given Eu estou na pagina inicial
         When Eu clicar no botao login
-        And Eu preencher <e-mail> com email
-        And Eu preencher <senha> com senha
+        And Eu preencher <johnny@gmail.com> com email
+        And Eu preencher <asdff> com senha
         And Eu clicar no botao entrar
         Then login realizado
     
-    Examples:
-        |e-mail|senha|
-        |johnny@gmail.com|asdf|
-        |samir@hotmail.com|hjkl|
-        ||ffff|
-        |jmsf2@cin.ufpe.br||
+    Scenario: Login - Sem senha
+        Given Eu estou na pagina inicial
+        When Eu clicar no botao login
+        And Eu preencher <samir@gmail.com> com email
+        And Eu preencher com senha
+        And Eu clicar no botao entrar
+        Then login realizado
+        
+    Scenario: Login - E-mail inválido
+        Given Eu estou na pagina inicial
+        When Eu clicar no botao login
+        And Eu preencher <vanessa> com email
+        And Eu preencher <1234> com senha
+        And Eu clicar no botao entrar
+        Then login realizado
+    
         

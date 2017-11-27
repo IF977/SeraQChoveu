@@ -11,9 +11,16 @@ Feature: Busca
         And Eu clicar no botao procurar
         Then busca realizada
         
-    Scenario: Busca Cidade errada
+    Scenario: Busca - Cidade errada
         Given Eu estou na pagina de busca
         When Eu preencher Ipojuca com cidade
         And Eu preencher 01/01 com data
+        And Eu clicar no botao procurar
+        Then busca realizada
+    
+    Scenario: Busca - Data errada
+        Given Eu estou na pagina de busca
+        When Eu preencher Ipojuca com cidade
+        And Eu preencher 15/15 com data
         And Eu clicar no botao procurar
         Then busca realizada

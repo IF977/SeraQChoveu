@@ -77,18 +77,16 @@
         <%= text_field_tag :data, params[:data], placeholder: "Escolha a data", 'data-behaviour'=> 'datepicker' %>
         <%= submit_tag "Procurar", :nome => nil, class: "btn btn-primary" %>
       <% end %>
-  </div>
-  </div>
-</div>
-<div class="input" id="datepicker">
-    <input type="text" class="form-control">
-    <script type="text/javascript">
-      $('[data-behaviour~=datepicker]').datepicker({
-        language: "pt-BR",
-        format: "dd/mm",
-        startDate: "0d",
-        endDate: "+366d",
-        autoclose: true,
-      });
-    </script>
+      <div class="input" id="datepicker">
+          <script type="text/javascript">
+            $('[data-behaviour~=datepicker]').datepicker({
+                language: "pt-BR",
+                format: "dd/mm",
+                startDate: "0d",
+                endDate: "+366d",
+                autoclose: true,
+            });
+          </script>
+      </div>
+    </div>
 </div>
